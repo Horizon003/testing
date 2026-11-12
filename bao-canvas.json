@@ -1,0 +1,297 @@
+{
+  "deliverySchemaVersion": 1,
+  "playerContract": 1,
+  "requires": [],
+  "target": "full",
+  "mode": "selected",
+  "runtimeGraph": {
+    "runtimeGraphSchemaVersion": 1,
+    "version": "2.1",
+    "name": "Bao (onboarding talk showcase)",
+    "canvasName": "Bao onboarding",
+    "initialNode": "rest",
+    "autoPlay": true,
+    "nodes": [
+      {
+        "id": "rest",
+        "name": "Rest"
+      },
+      {
+        "id": "think",
+        "name": "Think"
+      },
+      {
+        "id": "drum",
+        "name": "Drum"
+      },
+      {
+        "id": "plead",
+        "name": "Plead"
+      },
+      {
+        "id": "suckin",
+        "name": "Suck in"
+      },
+      {
+        "id": "lookRight",
+        "name": "Look right"
+      },
+      {
+        "id": "lookUp",
+        "name": "Look up"
+      },
+      {
+        "id": "eager",
+        "name": "Eager"
+      }
+    ],
+    "edges": [
+      {
+        "id": "rest-loop",
+        "name": "Rest",
+        "source": "rest",
+        "target": "rest",
+        "isLoop": true,
+        "duration": 5,
+        "videos": {
+          "webm": "https://assets.masko.ai/547bbb8e/bao-onboarding-talk-showcase-zm8hzgwb/rest-71006944.webm"
+        }
+      },
+      {
+        "id": "think-loop",
+        "name": "Think",
+        "source": "think",
+        "target": "think",
+        "isLoop": true,
+        "duration": 5,
+        "videos": {
+          "webm": "https://assets.masko.ai/547bbb8e/bao-onboarding-talk-showcase-zm8hzgwb/think-556ada1b.webm"
+        }
+      },
+      {
+        "id": "drum-loop",
+        "name": "Drum",
+        "source": "drum",
+        "target": "drum",
+        "isLoop": true,
+        "duration": 5,
+        "videos": {
+          "webm": "https://assets.masko.ai/547bbb8e/bao-onboarding-talk-showcase-zm8hzgwb/drum-2d6ca574.webm"
+        }
+      },
+      {
+        "id": "plead-loop",
+        "name": "Plead",
+        "source": "plead",
+        "target": "plead",
+        "isLoop": true,
+        "duration": 5,
+        "videos": {
+          "webm": "https://assets.masko.ai/547bbb8e/bao-onboarding-talk-showcase-zm8hzgwb/plead-cc29381a.webm"
+        }
+      },
+      {
+        "id": "lookUp-loop",
+        "name": "Look up",
+        "source": "lookUp",
+        "target": "lookUp",
+        "isLoop": true,
+        "duration": 5,
+        "videos": {
+          "webm": "https://assets.masko.ai/547bbb8e/bao-onboarding-talk-showcase-zm8hzgwb/look-up-811d29fc.webm"
+        }
+      },
+      {
+        "id": "eager-loop",
+        "name": "Eager",
+        "source": "eager",
+        "target": "eager",
+        "isLoop": true,
+        "duration": 5,
+        "videos": {
+          "webm": "https://assets.masko.ai/547bbb8e/bao-onboarding-talk-showcase-zm8hzgwb/eager-575af2da.webm"
+        }
+      },
+      {
+        "id": "rest-to-think",
+        "name": "rest → think",
+        "source": "rest",
+        "target": "think",
+        "isLoop": false,
+        "duration": 5,
+        "videos": {
+          "webm": "https://assets.masko.ai/547bbb8e/bao-onboarding-talk-showcase-zm8hzgwb/rest---think-33c39eb3.webm"
+        },
+        "conditions": [
+          {
+            "op": "==",
+            "input": "action::answer",
+            "value": true
+          }
+        ]
+      },
+      {
+        "id": "think-to-rest",
+        "name": "think → rest",
+        "source": "think",
+        "target": "rest",
+        "isLoop": false,
+        "duration": 5,
+        "videos": {
+          "webm": "https://assets.masko.ai/547bbb8e/bao-onboarding-talk-showcase-zm8hzgwb/think---rest-019b9857.webm"
+        },
+        "conditions": [
+          {
+            "op": "==",
+            "input": "action::answer",
+            "value": false
+          }
+        ]
+      },
+      {
+        "id": "think-to-drum",
+        "name": "think → drum",
+        "source": "think",
+        "target": "drum",
+        "isLoop": false,
+        "duration": 5,
+        "videos": {
+          "webm": "https://assets.masko.ai/547bbb8e/bao-onboarding-talk-showcase-zm8hzgwb/think---drum-89078bce.webm"
+        },
+        "conditions": [
+          {
+            "op": "==",
+            "input": "action::planReady",
+            "value": true
+          }
+        ]
+      },
+      {
+        "id": "drum-to-plead",
+        "name": "drum → plead",
+        "source": "drum",
+        "target": "plead",
+        "isLoop": false,
+        "duration": 5,
+        "videos": {
+          "webm": "https://assets.masko.ai/547bbb8e/bao-onboarding-talk-showcase-zm8hzgwb/drum---plead-b570b523.webm"
+        },
+        "conditions": [
+          {
+            "op": "==",
+            "input": "action::paywall",
+            "value": true
+          }
+        ]
+      },
+      {
+        "id": "plead-to-drum",
+        "name": "plead → drum",
+        "source": "plead",
+        "target": "drum",
+        "isLoop": false,
+        "duration": 5,
+        "videos": {
+          "webm": "https://assets.masko.ai/547bbb8e/bao-onboarding-talk-showcase-zm8hzgwb/plead---drum-8b9d1829.webm"
+        },
+        "conditions": [
+          {
+            "op": "==",
+            "input": "action::subscribed",
+            "value": true
+          }
+        ]
+      },
+      {
+        "id": "think-to-suckin",
+        "name": "think → suckin",
+        "source": "think",
+        "target": "suckin",
+        "isLoop": false,
+        "duration": 5,
+        "videos": {
+          "webm": "https://assets.masko.ai/547bbb8e/bao-onboarding-talk-showcase-zm8hzgwb/think---suck-in-5eedd42c.webm"
+        },
+        "conditions": [
+          {
+            "op": "==",
+            "input": "action::loseWeight",
+            "value": true
+          }
+        ]
+      },
+      {
+        "id": "lookRight-to-lookUp",
+        "name": "lookRight → lookUp",
+        "source": "lookRight",
+        "target": "lookUp",
+        "isLoop": false,
+        "duration": 5,
+        "videos": {
+          "webm": "https://assets.masko.ai/547bbb8e/bao-onboarding-talk-showcase-zm8hzgwb/look-right---look-up-01b78653.webm"
+        },
+        "conditions": [
+          {
+            "op": "==",
+            "input": "action::slide",
+            "value": true
+          }
+        ]
+      }
+    ],
+    "inputs": [
+      {
+        "name": "action::answer",
+        "type": "boolean",
+        "default": false,
+        "system": true
+      },
+      {
+        "name": "action::planReady",
+        "type": "boolean",
+        "default": false,
+        "system": true
+      },
+      {
+        "name": "action::paywall",
+        "type": "boolean",
+        "default": false,
+        "system": true
+      },
+      {
+        "name": "action::subscribed",
+        "type": "boolean",
+        "default": false,
+        "system": true
+      },
+      {
+        "name": "action::loseWeight",
+        "type": "boolean",
+        "default": false,
+        "system": true
+      },
+      {
+        "name": "action::slide",
+        "type": "boolean",
+        "default": false,
+        "system": true
+      },
+      {
+        "name": "action::loading",
+        "type": "boolean",
+        "default": false,
+        "system": true
+      },
+      {
+        "name": "node::loopCount",
+        "type": "number",
+        "default": 0,
+        "system": true
+      }
+    ],
+    "target": "full"
+  },
+  "deliveryAccess": {
+    "urlMode": "public"
+  }
+}
